@@ -1,11 +1,11 @@
-package com.bifit.pages;
+package com.bifit.fw.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class PageResult extends PageBase {
 
-    @FindBy(xpath = "html/body/div[2]/div[4]/div[1]/div[1]/div/div/div/div[2]/div/div/span/h1")
+    @FindBy(xpath = "/div[2]/div[4]/div[1]/div[1]/div/div/div/div[2]/div/div/span")
     public WebElement title;
 
     @FindBy(xpath = "html/body/div[2]/div[4]/div[1]/div[2]/div[1]/div/div/div/div/div/form/div[1]/div[1]/div/div[1]/div")

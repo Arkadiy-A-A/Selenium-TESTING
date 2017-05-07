@@ -1,4 +1,4 @@
-package com.bifit.wdfactory;
+package com.bifit.fw.wdfactory;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;

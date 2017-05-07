@@ -1,7 +1,7 @@
 package com.bifit.firsttest;
 
-import com.bifit.pages.PageSetFilter;
-import com.bifit.wdfactory.WebDriverFactory;
+import com.bifit.fw.pages.PageSetFilter;
+import com.bifit.fw.wdfactory.WebDriverFactory;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
