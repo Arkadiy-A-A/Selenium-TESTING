@@ -1,11 +1,9 @@
 package com.bifit.fw.helpers;
 
-
-import com.bifit.fw.TestBase;
 import com.bifit.fw.pages.PageSetFilter;
 import org.openqa.selenium.support.PageFactory;
 
-public class HelperSetFilter extends TestBase {
+public class HelperSetFilter extends HelperBase {
 
     private PageSetFilter pageSetFilter;
 
@@ -15,20 +13,23 @@ public class HelperSetFilter extends TestBase {
 
     //Установка различных фильтров на тестируемой странице
     public void setFiltersAndFindFilm() throws InterruptedException {
-        pageSetFilter.getButtonInsKino().click();
-        pageSetFilter.getButtonSelectorWaitTime().click();
-        pageSetFilter.getWaitTime().click();
-        pageSetFilter.getFieldMetroStation().clear();
-        pageSetFilter.getFieldMetroStation().click();
-        pageSetFilter.getFieldMetroStation().sendKeys("Курская");
-        Thread.sleep(1000);
-        pageSetFilter.getListStationSearch().click();
-        pageSetFilter.getButtonSelectorGenres().click();
-        pageSetFilter.getTragedy().click();
-        pageSetFilter.getComedy().click();
-        pageSetFilter.getFormat2D().click();
-        pageSetFilter.getButtonFind().click();
-        Thread.sleep(10000);
+        getLogger().info("Начала процеса установки фильтров на странице \"https://afisha.mail.ru/\"");
+        try{
+            click(pageSetFilter.getButtonInsKino());
+            click(pageSetFilter.getButtonSelectorWaitTime());
+            click(pageSetFilter.getWaitTime());
+            clear(pageSetFilter.getFieldMetroStation());
+            click(pageSetFilter.getFieldMetroStation());
+            sendKeys(pageSetFilter.getFieldMetroStation(),"Курская");
+            click(pageSetFilter.getListStationSearch());
+            click(pageSetFilter.getButtonSelectorGenres());
+            click(pageSetFilter.getTragedy());
+            click(pageSetFilter.getComedy());
+            click(pageSetFilter.getFormat2D());
+            click(pageSetFilter.getButtonFind());
+        }catch (Throwable e){
+            getLogger().error(e);
+        }
     }
 
 }
